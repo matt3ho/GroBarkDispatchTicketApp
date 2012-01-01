@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5C9437F14AFDC5400189114 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9437E14AFDC5400189114 /* UIKit.framework */; };
+		A5C9438114AFDC5400189114 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9438014AFDC5400189114 /* Foundation.framework */; };
+		A5C9438314AFDC5400189114 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9438214AFDC5400189114 /* CoreGraphics.framework */; };
+		A5C9438914AFDC5400189114 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5C9438714AFDC5400189114 /* InfoPlist.strings */; };
+		A5C9438B14AFDC5400189114 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C9438A14AFDC5400189114 /* main.m */; };
+		A5C9438F14AFDC5400189114 /* GroBarkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C9438E14AFDC5400189114 /* GroBarkAppDelegate.m */; };
+		A5C9439214AFDC5400189114 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C9439014AFDC5400189114 /* MainStoryboard.storyboard */; };
+		A5C9439514AFDC5400189114 /* DispatchTicketListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C9439414AFDC5400189114 /* DispatchTicketListController.m */; };
+		A5C9439D14AFDC5400189114 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9439C14AFDC5400189114 /* SenTestingKit.framework */; };
+		A5C9439E14AFDC5400189114 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9437E14AFDC5400189114 /* UIKit.framework */; };
+		A5C9439F14AFDC5400189114 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9438014AFDC5400189114 /* Foundation.framework */; };
+		A5C943A714AFDC5400189114 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5C943A514AFDC5400189114 /* InfoPlist.strings */; };
+		A5C943AA14AFDC5400189114 /* GroBarkDispatchTicketAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C943A914AFDC5400189114 /* GroBarkDispatchTicketAppTests.m */; };
+		A5C943B414AFE04C00189114 /* DispatchTicketListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C943B314AFE04C00189114 /* DispatchTicketListCell.xib */; };
+		A5C943B814AFE3C200189114 /* DispatchTicketDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C943B614AFE3C200189114 /* DispatchTicketDetailController.m */; };
+		A5C943BB14AFE43800189114 /* DispatchTicketDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C943BA14AFE43800189114 /* DispatchTicketDetailCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5C943A014AFDC5400189114 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5C9437114AFDC5400189114 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5C9437914AFDC5400189114;
+			remoteInfo = GroBarkDispatchTicketApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5C9437A14AFDC5400189114 /* GroBarkDispatchTicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroBarkDispatchTicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C9437E14AFDC5400189114 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A5C9438014AFDC5400189114 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A5C9438214AFDC5400189114 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A5C9438614AFDC5400189114 /* GroBarkDispatchTicketApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GroBarkDispatchTicketApp-Info.plist"; sourceTree = "<group>"; };
+		A5C9438814AFDC5400189114 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A5C9438A14AFDC5400189114 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5C9438C14AFDC5400189114 /* GroBarkDispatchTicketApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroBarkDispatchTicketApp-Prefix.pch"; sourceTree = "<group>"; };
+		A5C9438D14AFDC5400189114 /* GroBarkAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroBarkAppDelegate.h; sourceTree = "<group>"; };
+		A5C9438E14AFDC5400189114 /* GroBarkAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroBarkAppDelegate.m; sourceTree = "<group>"; };
+		A5C9439114AFDC5400189114 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A5C9439314AFDC5400189114 /* DispatchTicketListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchTicketListController.h; sourceTree = "<group>"; };
+		A5C9439414AFDC5400189114 /* DispatchTicketListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchTicketListController.m; sourceTree = "<group>"; };
+		A5C9439B14AFDC5400189114 /* GroBarkDispatchTicketAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroBarkDispatchTicketAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C9439C14AFDC5400189114 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A5C943A414AFDC5400189114 /* GroBarkDispatchTicketAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GroBarkDispatchTicketAppTests-Info.plist"; sourceTree = "<group>"; };
+		A5C943A614AFDC5400189114 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A5C943A814AFDC5400189114 /* GroBarkDispatchTicketAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroBarkDispatchTicketAppTests.h; sourceTree = "<group>"; };
+		A5C943A914AFDC5400189114 /* GroBarkDispatchTicketAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroBarkDispatchTicketAppTests.m; sourceTree = "<group>"; };
+		A5C943B314AFE04C00189114 /* DispatchTicketListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispatchTicketListCell.xib; sourceTree = "<group>"; };
+		A5C943B514AFE3C200189114 /* DispatchTicketDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchTicketDetailController.h; sourceTree = "<group>"; };
+		A5C943B614AFE3C200189114 /* DispatchTicketDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchTicketDetailController.m; sourceTree = "<group>"; };
+		A5C943BA14AFE43800189114 /* DispatchTicketDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispatchTicketDetailCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5C9437714AFDC5400189114 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C9437F14AFDC5400189114 /* UIKit.framework in Frameworks */,
+				A5C9438114AFDC5400189114 /* Foundation.framework in Frameworks */,
+				A5C9438314AFDC5400189114 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C9439714AFDC5400189114 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C9439D14AFDC5400189114 /* SenTestingKit.framework in Frameworks */,
+				A5C9439E14AFDC5400189114 /* UIKit.framework in Frameworks */,
+				A5C9439F14AFDC5400189114 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5C9436F14AFDC5400189114 = {
+			isa = PBXGroup;
+			children = (
+				A5C9438414AFDC5400189114 /* GroBarkDispatchTicketApp */,
+				A5C943A214AFDC5400189114 /* GroBarkDispatchTicketAppTests */,
+				A5C9437D14AFDC5400189114 /* Frameworks */,
+				A5C9437B14AFDC5400189114 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5C9437B14AFDC5400189114 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5C9437A14AFDC5400189114 /* GroBarkDispatchTicketApp.app */,
+				A5C9439B14AFDC5400189114 /* GroBarkDispatchTicketAppTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5C9437D14AFDC5400189114 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5C9437E14AFDC5400189114 /* UIKit.framework */,
+				A5C9438014AFDC5400189114 /* Foundation.framework */,
+				A5C9438214AFDC5400189114 /* CoreGraphics.framework */,
+				A5C9439C14AFDC5400189114 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5C9438414AFDC5400189114 /* GroBarkDispatchTicketApp */ = {
+			isa = PBXGroup;
+			children = (
+				A5C9438D14AFDC5400189114 /* GroBarkAppDelegate.h */,
+				A5C9438E14AFDC5400189114 /* GroBarkAppDelegate.m */,
+				A5C9439014AFDC5400189114 /* MainStoryboard.storyboard */,
+				A5C943B514AFE3C200189114 /* DispatchTicketDetailController.h */,
+				A5C943B614AFE3C200189114 /* DispatchTicketDetailController.m */,
+				A5C943BA14AFE43800189114 /* DispatchTicketDetailCell.xib */,
+				A5C943B314AFE04C00189114 /* DispatchTicketListCell.xib */,
+				A5C9439314AFDC5400189114 /* DispatchTicketListController.h */,
+				A5C9439414AFDC5400189114 /* DispatchTicketListController.m */,
+				A5C9438514AFDC5400189114 /* Supporting Files */,
+			);
+			path = GroBarkDispatchTicketApp;
+			sourceTree = "<group>";
+		};
+		A5C9438514AFDC5400189114 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5C9438614AFDC5400189114 /* GroBarkDispatchTicketApp-Info.plist */,
+				A5C9438714AFDC5400189114 /* InfoPlist.strings */,
+				A5C9438A14AFDC5400189114 /* main.m */,
+				A5C9438C14AFDC5400189114 /* GroBarkDispatchTicketApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5C943A214AFDC5400189114 /* GroBarkDispatchTicketAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5C943A814AFDC5400189114 /* GroBarkDispatchTicketAppTests.h */,
+				A5C943A914AFDC5400189114 /* GroBarkDispatchTicketAppTests.m */,
+				A5C943A314AFDC5400189114 /* Supporting Files */,
+			);
+			path = GroBarkDispatchTicketAppTests;
+			sourceTree = "<group>";
+		};
+		A5C943A314AFDC5400189114 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5C943A414AFDC5400189114 /* GroBarkDispatchTicketAppTests-Info.plist */,
+				A5C943A514AFDC5400189114 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5C9437914AFDC5400189114 /* GroBarkDispatchTicketApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5C943AD14AFDC5400189114 /* Build configuration list for PBXNativeTarget "GroBarkDispatchTicketApp" */;
+			buildPhases = (
+				A5C9437614AFDC5400189114 /* Sources */,
+				A5C9437714AFDC5400189114 /* Frameworks */,
+				A5C9437814AFDC5400189114 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GroBarkDispatchTicketApp;
+			productName = GroBarkDispatchTicketApp;
+			productReference = A5C9437A14AFDC5400189114 /* GroBarkDispatchTicketApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5C9439A14AFDC5400189114 /* GroBarkDispatchTicketAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5C943B014AFDC5400189114 /* Build configuration list for PBXNativeTarget "GroBarkDispatchTicketAppTests" */;
+			buildPhases = (
+				A5C9439614AFDC5400189114 /* Sources */,
+				A5C9439714AFDC5400189114 /* Frameworks */,
+				A5C9439814AFDC5400189114 /* Resources */,
+				A5C9439914AFDC5400189114 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5C943A114AFDC5400189114 /* PBXTargetDependency */,
+			);
+			name = GroBarkDispatchTicketAppTests;
+			productName = GroBarkDispatchTicketAppTests;
+			productReference = A5C9439B14AFDC5400189114 /* GroBarkDispatchTicketAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5C9437114AFDC5400189114 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = A5C9437414AFDC5400189114 /* Build configuration list for PBXProject "GroBarkDispatchTicketApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A5C9436F14AFDC5400189114;
+			productRefGroup = A5C9437B14AFDC5400189114 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5C9437914AFDC5400189114 /* GroBarkDispatchTicketApp */,
+				A5C9439A14AFDC5400189114 /* GroBarkDispatchTicketAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5C9437814AFDC5400189114 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C9438914AFDC5400189114 /* InfoPlist.strings in Resources */,
+				A5C9439214AFDC5400189114 /* MainStoryboard.storyboard in Resources */,
+				A5C943B414AFE04C00189114 /* DispatchTicketListCell.xib in Resources */,
+				A5C943BB14AFE43800189114 /* DispatchTicketDetailCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C9439814AFDC5400189114 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C943A714AFDC5400189114 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5C9439914AFDC5400189114 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5C9437614AFDC5400189114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C9438B14AFDC5400189114 /* main.m in Sources */,
+				A5C9438F14AFDC5400189114 /* GroBarkAppDelegate.m in Sources */,
+				A5C9439514AFDC5400189114 /* DispatchTicketListController.m in Sources */,
+				A5C943B814AFE3C200189114 /* DispatchTicketDetailController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C9439614AFDC5400189114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C943AA14AFDC5400189114 /* GroBarkDispatchTicketAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5C943A114AFDC5400189114 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5C9437914AFDC5400189114 /* GroBarkDispatchTicketApp */;
+			targetProxy = A5C943A014AFDC5400189114 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5C9438714AFDC5400189114 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5C9438814AFDC5400189114 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A5C9439014AFDC5400189114 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5C9439114AFDC5400189114 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		A5C943A514AFDC5400189114 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5C943A614AFDC5400189114 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5C943AB14AFDC5400189114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A5C943AC14AFDC5400189114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5C943AE14AFDC5400189114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroBarkDispatchTicketApp/GroBarkDispatchTicketApp-Prefix.pch";
+				INFOPLIST_FILE = "GroBarkDispatchTicketApp/GroBarkDispatchTicketApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A5C943AF14AFDC5400189114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroBarkDispatchTicketApp/GroBarkDispatchTicketApp-Prefix.pch";
+				INFOPLIST_FILE = "GroBarkDispatchTicketApp/GroBarkDispatchTicketApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A5C943B114AFDC5400189114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GroBarkDispatchTicketApp.app/GroBarkDispatchTicketApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroBarkDispatchTicketApp/GroBarkDispatchTicketApp-Prefix.pch";
+				INFOPLIST_FILE = "GroBarkDispatchTicketAppTests/GroBarkDispatchTicketAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A5C943B214AFDC5400189114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GroBarkDispatchTicketApp.app/GroBarkDispatchTicketApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroBarkDispatchTicketApp/GroBarkDispatchTicketApp-Prefix.pch";
+				INFOPLIST_FILE = "GroBarkDispatchTicketAppTests/GroBarkDispatchTicketAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5C9437414AFDC5400189114 /* Build configuration list for PBXProject "GroBarkDispatchTicketApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C943AB14AFDC5400189114 /* Debug */,
+				A5C943AC14AFDC5400189114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5C943AD14AFDC5400189114 /* Build configuration list for PBXNativeTarget "GroBarkDispatchTicketApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C943AE14AFDC5400189114 /* Debug */,
+				A5C943AF14AFDC5400189114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A5C943B014AFDC5400189114 /* Build configuration list for PBXNativeTarget "GroBarkDispatchTicketAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C943B114AFDC5400189114 /* Debug */,
+				A5C943B214AFDC5400189114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5C9437114AFDC5400189114 /* Project object */;
+}
