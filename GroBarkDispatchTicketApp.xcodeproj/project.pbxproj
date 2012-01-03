@@ -23,6 +23,7 @@
 		A5C943B414AFE04C00189114 /* DispatchTicketListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C943B314AFE04C00189114 /* DispatchTicketListCell.xib */; };
 		A5C943B814AFE3C200189114 /* DispatchTicketDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C943B614AFE3C200189114 /* DispatchTicketDetailController.m */; };
 		A5C943BB14AFE43800189114 /* DispatchTicketDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C943BA14AFE43800189114 /* DispatchTicketDetailCell.xib */; };
+		A5C943BE14B19B0F00189114 /* DispatchTicketObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C943BD14B19B0E00189114 /* DispatchTicketObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		A5C943B514AFE3C200189114 /* DispatchTicketDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchTicketDetailController.h; sourceTree = "<group>"; };
 		A5C943B614AFE3C200189114 /* DispatchTicketDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchTicketDetailController.m; sourceTree = "<group>"; };
 		A5C943BA14AFE43800189114 /* DispatchTicketDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispatchTicketDetailCell.xib; sourceTree = "<group>"; };
+		A5C943BC14B19B0E00189114 /* DispatchTicketObject.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DispatchTicketObject.h; sourceTree = "<group>"; };
+		A5C943BD14B19B0E00189114 /* DispatchTicketObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchTicketObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				A5C943B614AFE3C200189114 /* DispatchTicketDetailController.m */,
 				A5C943BA14AFE43800189114 /* DispatchTicketDetailCell.xib */,
 				A5C943B314AFE04C00189114 /* DispatchTicketListCell.xib */,
+				A5C943BC14B19B0E00189114 /* DispatchTicketObject.h */,
+				A5C943BD14B19B0E00189114 /* DispatchTicketObject.m */,
 				A5C9439314AFDC5400189114 /* DispatchTicketListController.h */,
 				A5C9439414AFDC5400189114 /* DispatchTicketListController.m */,
 				A5C9438514AFDC5400189114 /* Supporting Files */,
@@ -274,6 +279,7 @@
 				A5C9438F14AFDC5400189114 /* GroBarkAppDelegate.m in Sources */,
 				A5C9439514AFDC5400189114 /* DispatchTicketListController.m in Sources */,
 				A5C943B814AFE3C200189114 /* DispatchTicketDetailController.m in Sources */,
+				A5C943BE14B19B0F00189114 /* DispatchTicketObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

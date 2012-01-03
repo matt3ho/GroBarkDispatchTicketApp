@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DispatchTicketListController : UIViewController
+#import "DispatchTicketDetailController.h"
+
+@class DispatchTicketListController;
+
+@interface DispatchTicketListController : UITableViewController 
+<UITableViewDelegate, UITableViewDataSource> {
+    DispatchTicketDetailController *dispatchTicketDetailController;
+    NSArray *dispatchTicketListObjects;
+//    UITableView *dispatchTicketListTable;
+    UITableViewCell *dispatchTicketListEntryCell;
+}
+
+@property (strong, nonatomic) DispatchTicketDetailController *dispatchTicketDetailController;
+@property (strong, nonatomic) NSArray *dispatchTicketListObjects;
+//@property (strong, nonatomic) IBOutlet UITableView *dispatchTicketListTable;
+@property (strong, nonatomic) IBOutlet UITableViewCell *dispatchTicketListEntryCell;
 
 @end
