@@ -17,17 +17,19 @@
 #define kTicketListBolDropOffTag 7
 #define kTicketListTicketTypeTag 8
 
-#define kTicketDetailMMNumberTag 1
-#define kTicketDetailSoldToTag 2
-#define kTicketDetailShipToTag 3
-#define kTicketDetailDestinationTag 4
-#define kTicketDetailDriverTag 5
-#define kTicketDetailDateTag 6
-#define kTicketDetailBolPickUpTag 7
-#define kTicketDetailBolDropOffTag 8
-#define kTicketDetailGroBarkNumberTag 9
-#define kTicketDetailLoadedByTag 10
-#define kTicketDetailNotesTag 11
+//#define kTicketDetailMMNumberTag 1
+//#define kTicketDetailSoldToTag 2
+//#define kTicketDetailShipToTag 3
+//#define kTicketDetailDestinationTag 4
+//#define kTicketDetailDriverTag 5
+//#define kTicketDetailDateTag 6
+//#define kTicketDetailBolPickUpTag 7
+//#define kTicketDetailBolDropOffTag 8
+//#define kTicketDetailGroBarkNumberTag 9
+//#define kTicketDetailLoadedByTag 10
+//#define kTicketDetailNotesTag 11
+#define kTicketDetailDriverSignatureTag 12
+#define kTicketDetailReceiverSignatureTag 13
 
 typedef enum { 
     customerDispatch = 0,

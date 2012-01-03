@@ -151,7 +151,7 @@
                             <outlet property="delegate" destination="nh6-HL-IW9" id="lnW-DX-ea9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tw7-m4-8MN"/>
+                    <navigationItem key="navigationItem" title="Ticket List" id="tw7-m4-8MN"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="350" y="524"/>
@@ -385,12 +385,44 @@
                                 <rect key="frame" x="42" y="404" width="697" height="228"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DispatchTicketItemDetailCell" rowHeight="70" id="mQU-tB-MR8">
+                                        <rect key="frame" x="0.0" y="22" width="697" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="697" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="17" id="n8l-rw-7d0">
+                                                    <rect key="frame" x="0.0" y="20" width="185" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="17" id="fpc-S6-y3i">
+                                                    <rect key="frame" x="256" y="24" width="441" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="68n-X0-sYk" id="dAg-M6-yKk"/>
+                                    <outlet property="delegate" destination="68n-X0-sYk" id="bWU-bk-Xja"/>
+                                </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="kXg-4l-tyM">
+                            <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" id="kXg-4l-tyM">
                                 <rect key="frame" x="42" y="761" width="352" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="nqB-1u-lXO">
+                            <imageView userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" id="nqB-1u-lXO">
                                 <rect key="frame" x="396" y="761" width="352" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -398,6 +430,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="8jI-SP-AZd"/>
+                    <connections>
+                        <outlet property="GroBarkNumberLabel" destination="Zcu-Wh-IlB" id="NHt-BJ-zD6"/>
+                        <outlet property="LoadedByLabel" destination="WKT-R0-Nad" id="Hff-gx-MMe"/>
+                        <outlet property="NotesLabel" destination="jJy-UR-ppV" id="4CT-2t-UWj"/>
+                        <outlet property="bolDropOffLabel" destination="6Lg-af-3w7" id="qq5-D4-llm"/>
+                        <outlet property="bolPickUpLabel" destination="JZG-4V-yxb" id="HMR-KU-myc"/>
+                        <outlet property="dateLabel" destination="II1-ye-goQ" id="zlQ-OZ-GtI"/>
+                        <outlet property="destinationLabel" destination="R9e-Iq-WNA" id="tji-a3-azj"/>
+                        <outlet property="driverLabel" destination="Upt-yG-K5Y" id="Jf2-3G-ikm"/>
+                        <outlet property="driverSignature" destination="kXg-4l-tyM" id="lxh-yd-2Wd"/>
+                        <outlet property="mmNumberLabel" destination="h6h-c1-XnH" id="bNe-a8-pZx"/>
+                        <outlet property="shipToLabel" destination="jS8-Ae-HE8" id="p1U-up-crU"/>
+                        <outlet property="soldToLabel" destination="8KS-LL-DX8" id="doB-Bk-8NN"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1228" y="524"/>
@@ -418,10 +464,21 @@
         </scene>
     </scenes>
     <classes>
-        <class className="DispatchTicketDetailController" superclassName="UITableViewController">
+        <class className="DispatchTicketDetailController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DispatchTicketDetailController.h"/>
             <relationships>
-                <relationship kind="outlet" name="dispatchTicketDetailTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="GroBarkNumberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="LoadedByLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="NotesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bolDropOffLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bolPickUpLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="destinationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="driverLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="driverSignature" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mmNumberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shipToLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="soldToLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="DispatchTicketListController" superclassName="UITableViewController">

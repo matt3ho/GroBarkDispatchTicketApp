@@ -9,6 +9,7 @@
 #import "DispatchTicketListController.h"
 
 #import "DispatchTicketObject.h"
+#import "DispatchTicketItemDetailObject.h"
 
 @implementation DispatchTicketListController
 
@@ -40,6 +41,20 @@
     dtlo1.bolDropOffLoc = @"abc123";
     dtlo1.ticketType = customerDispatch;
     
+    dtlo1.mmNumber = @"029482";
+    dtlo1.soldTo = @"Abacus Ltd.";
+    dtlo1.shipTo = @"";
+    dtlo1.driver = @"Bob";
+    dtlo1.loadedBy = @"Joe";
+    dtlo1.notes = @"";
+    
+    DispatchTicketItemDetailObject *dtido1 = [[DispatchTicketItemDetailObject alloc] init];
+    dtido1.quantity = @"143";
+    dtido1.description = @"crumbs";
+    dtlo1.itemList = [[NSArray alloc] initWithObjects:dtido1, nil];
+    
+    dtlo1.groBarkNumber = @"391237";
+    
     DispatchTicketObject *dtlo2 = [[DispatchTicketObject alloc] init];
     dtlo2.date = [[NSDate alloc] initWithTimeIntervalSince1970:1308268001];
     dtlo2.origin = @"Mo town";
@@ -49,6 +64,26 @@
     dtlo2.bolPickUpLoc = @"dfg3462";
     dtlo2.bolDropOffLoc = @"fg6r34";
     dtlo2.ticketType = customerDispatch;
+    
+    dtlo2.mmNumber = @"049385";
+    dtlo2.soldTo = @"Abacus Ltd.";
+    dtlo2.shipTo = @"Absinth Ltd.";
+    dtlo2.driver = @"Bob";
+    dtlo2.loadedBy = @"Ray";
+    dtlo2.notes = @"Some notes just in cas";
+    
+    DispatchTicketItemDetailObject *dtido3 = [[DispatchTicketItemDetailObject alloc] init];
+    dtido3.quantity = @"22";
+    dtido3.description = @"";
+    DispatchTicketItemDetailObject *dtido4 = [[DispatchTicketItemDetailObject alloc] init];
+    dtido4.quantity = @"789";
+    dtido4.description = @"bumps on a log";
+    DispatchTicketItemDetailObject *dtido5 = [[DispatchTicketItemDetailObject alloc] init];
+    dtido5.quantity = @"287";
+    dtido5.description = @"steel fillings";
+    dtlo2.itemList = [[NSArray alloc] initWithObjects:dtido3, dtido4, dtido5, nil];
+    
+    dtlo2.groBarkNumber = @"3927347";
     
     dispatchTicketListObjects = [[NSArray alloc] initWithObjects:dtlo1, dtlo2, nil];
 }
@@ -149,9 +184,9 @@
      */
     if ([[segue identifier] isEqualToString:@"ShowTicketDetailView"]) {
         
-//        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
-//        DispatchTicketDetailController *dispatchTicketDetailController = [segue destinationViewController];
-//        detailViewController.play = [dataController objectInListAtIndex:selectedRowIndex.row];
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        self.dispatchTicketDetailController = [segue destinationViewController];
+        dispatchTicketDetailController.dispatchTicketObject = [self.dispatchTicketListObjects objectAtIndex:selectedRowIndex.row];
     }
 }
 
