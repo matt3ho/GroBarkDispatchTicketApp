@@ -15,6 +15,7 @@
 @synthesize dispatchTicketObject;
 
 @synthesize driverSignature;
+@synthesize receiverSignature;
 
 @synthesize mmNumberLabel;
 @synthesize soldToLabel;
@@ -82,22 +83,37 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+/*
+ Returns nil if touch is not inside driver or receiver signature image, otherwise returns the imageview it is in as a UIImageView
+ */
+-(UIImageView*)privateTouchInsideSignatureView:(UITouch*)touch withEvent:(UIEvent *)event {
+    CGPoint touchPoint = [touch locationInView: self.view];
+    UIImageView *signatureImage = nil;
+    if ([self.driverSignature pointInside:[self.view convertPoint:touchPoint toView:self.driverSignature] withEvent:event]) {
+        signatureImage = self.driverSignature;
+    } else if ([self.receiverSignature pointInside:[self.view convertPoint:touchPoint toView:self.receiverSignature] withEvent:event]) {
+        signatureImage = self.receiverSignature;
+    }
+    
+    return signatureImage;
+}
+
 #pragma mark -
 #pragma mark Signature Drawing Methods
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event { //implement touches cancelled as well?	
-	
 	mouseSwiped = NO;
-	UITouch *touch = [touches anyObject];
     
-    CGPoint touchPoint = [touch locationInView: self.driverSignature];
-    if ([self.driverSignature pointInside:touchPoint withEvent:event])
+    UITouch *touch = [touches anyObject];
+    UIImageView *signatureView = [self privateTouchInsideSignatureView:touch withEvent:event];
+    
+    if (signatureView != nil)
     {
         if ([touch tapCount] == 2) {
-            self.driverSignature.image = nil;
+            signatureView.image = nil;
             return;
         }
         
-        lastPoint = [touch locationInView:self.driverSignature];
+        lastPoint = [touch locationInView:signatureView];
 //        lastPoint.y -= 20;
     }
 }
@@ -106,16 +122,15 @@
 	mouseSwiped = YES;
 	
 	UITouch *touch = [touches anyObject];	
+    UIImageView *signatureView = [self privateTouchInsideSignatureView:touch withEvent:event];
     
-    CGPoint touchPoint = [touch locationInView: self.driverSignature];
-    if ([self.driverSignature pointInside:touchPoint withEvent:event])
+    if (signatureView != nil)
     {
-        CGPoint currentPoint = [touch locationInView:self.driverSignature];
+        CGPoint currentPoint = [touch locationInView:signatureView];
         //currentPoint.y -= 20;
         
-        
-        UIGraphicsBeginImageContext(self.driverSignature.frame.size);
-        [self.driverSignature.image drawInRect:CGRectMake(0, 0, self.driverSignature.frame.size.width, self.driverSignature.frame.size.height)];
+        UIGraphicsBeginImageContext(signatureView.frame.size);
+        [signatureView.image drawInRect:CGRectMake(0, 0, signatureView.frame.size.width, signatureView.frame.size.height)];
         CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
         CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 3.0);
         CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0.482, 0.62, 0.871, 1.0); //blue
@@ -123,7 +138,7 @@
         CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
         CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
         CGContextStrokePath(UIGraphicsGetCurrentContext());
-        self.driverSignature.image = UIGraphicsGetImageFromCurrentImageContext();
+        signatureView.image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
         lastPoint = currentPoint;
@@ -133,18 +148,18 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	
 	UITouch *touch = [touches anyObject];
+    UIImageView *signatureView = [self privateTouchInsideSignatureView:touch withEvent:event];
     
-    CGPoint touchPoint = [touch locationInView: self.driverSignature];
-    if ([self.driverSignature pointInside:touchPoint withEvent:event])
+    if (signatureView != nil)
     {
         if ([touch tapCount] == 2) {
-            self.driverSignature.image = nil;
+            signatureView.image = nil;
             return;
         }
         
         if(!mouseSwiped) {
-            UIGraphicsBeginImageContext(self.driverSignature.frame.size);
-            [self.driverSignature.image drawInRect:CGRectMake(0, 0, self.driverSignature.frame.size.width, self.driverSignature.frame.size.height)];
+            UIGraphicsBeginImageContext(signatureView.frame.size);
+            [signatureView.image drawInRect:CGRectMake(0, 0, signatureView.frame.size.width, signatureView.frame.size.height)];
             CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
             CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 3.0);
             CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0.482, 0.62, 0.871, 1.0); //blue
@@ -152,7 +167,7 @@
             CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
             CGContextStrokePath(UIGraphicsGetCurrentContext());
             CGContextFlush(UIGraphicsGetCurrentContext());
-            self.driverSignature.image = UIGraphicsGetImageFromCurrentImageContext();
+            signatureView.image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
         }
     }

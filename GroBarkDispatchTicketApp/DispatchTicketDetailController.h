@@ -17,6 +17,7 @@
     //UITableViewCell *dispatchTicketListEntryCell;
     
     UIImageView *driverSignature;
+    UIImageView *receiverSignature;
     CGPoint lastPoint;
 	BOOL mouseSwiped;
 }
@@ -26,6 +27,7 @@
 //@property (strong, nonatomic) IBOutlet UITableViewCell *dispatchTicketListEntryCell;
 
 @property (strong, nonatomic) IBOutlet UIImageView *driverSignature;
+@property (strong, nonatomic) IBOutlet UIImageView *receiverSignature;
 
 @property (strong, nonatomic) IBOutlet UILabel *mmNumberLabel;
 @property (strong, nonatomic) IBOutlet UILabel *soldToLabel;

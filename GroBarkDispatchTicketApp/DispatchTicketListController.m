@@ -18,7 +18,22 @@
 //@synthesize dispatchTicketListTable;
 @synthesize dispatchTicketListEntryCell; //no longer needed
 
-- (void)didReceiveMemoryWarning
+- (IBAction)openMapLink:(id)sender {
+    //TODO: error checking for types, regex for string replacement for multiple spaces
+    UIButton *mapButton = (UIButton*) sender;
+    UITableViewCell *tableCell = (UITableViewCell*) mapButton.superview.superview;
+    UITableView *table = (UITableView *)tableCell.superview;
+    NSIndexPath* pathOfTheCell = [table indexPathForCell:tableCell];
+    NSInteger rowOfTheCell = [pathOfTheCell row];
+    DispatchTicketObject *dto = [self.dispatchTicketListObjects objectAtIndex:rowOfTheCell];
+    NSMutableString *mapLink = [[NSMutableString alloc]initWithCapacity:40];
+    [mapLink appendString:@"http://maps.google.com/maps?q="];
+    [mapLink appendString:dto.destination];
+    NSInteger replacementsMade = [mapLink replaceOccurrencesOfString:@" " withString:@"+" options:nil range:NSMakeRange(0, [mapLink length])];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mapLink ]];
+}
+
+- (void)didReceiveMemoryWarning 
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
@@ -58,7 +73,7 @@
     DispatchTicketObject *dtlo2 = [[DispatchTicketObject alloc] init];
     dtlo2.date = [[NSDate alloc] initWithTimeIntervalSince1970:1308268001];
     dtlo2.origin = @"Mo town";
-    dtlo2.destination = @"Jupiter";
+    dtlo2.destination = @"155 Frobisher Dr., Waterloo, Ontario";
     dtlo2.product = @"Fake marshmellows";
     dtlo2.quantity = @"999 lbs";
     dtlo2.bolPickUpLoc = @"dfg3462";
@@ -189,41 +204,5 @@
         dispatchTicketDetailController.dispatchTicketObject = [self.dispatchTicketListObjects objectAtIndex:selectedRowIndex.row];
     }
 }
-
-//- (void)tableView:(UITableView *)tableView
-//didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-////    //    NSUInteger row = [indexPath row];
-////    //    NSString *shortMonth = [[self.mileageWeeks objectAtIndex:row] substringWithRange:NSMakeRange(0,3)];
-////    //    self.detailViewController.monthLabel.text = shortMonth;
-////    
-//    NSUInteger row = [indexPath row];
-//    DispatchTicketObject *dto = [self.dispatchTicketListObjects objectAtIndex:row];
-//    
-//     self.dispatchTicketDetailController = [[DispatchTicketDetailController alloc] init];
-//    
-//    self.dispatchTicketDetailController.dispatchTicketObject = dto;
-//    
-//    [self.navigationController pushViewController:self.dispatchTicketDetailController animated:YES];  //self.navigationController auto generated
-//    
-//    
-////    self.detailViewController.odometerWeekStartTextField.text = [NSString stringWithFormat:@"%d", mwlo.odometerWeekStart];
-////    self.detailViewController.odometerWeekEndTextField.text = [NSString stringWithFormat:@"%d", mwlo.odometerWeekEnd];
-////    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-////    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-////    self.detailViewController.monthLabel.text = [[dateFormatter stringFromDate:mwlo.weekStart] substringWithRange:NSMakeRange(0,3)];
-////    self.detailViewController.truckNumberLabel.text = mwlo.truckNumber;
-////    self.detailViewController.trailerNumberLabel.text = mwlo.trailerNumber;
-////    self.detailViewController.nameLabel.text = mwlo.name;
-////    
-////    [self.detailViewController.dispatchEntryTable reloadData];
-////    
-////    //    self.detailViewController.detailItem = shortMonth;
-////    //    President *prez = [self.list objectAtIndex:row];
-////    //    PresidentDetailController *childController = [[PresidentDetailController alloc] initWithStyle:UITableViewStyleGrouped];
-////    //    childController.title = prez.name; 
-////    //    childController.president = prez;
-////    //   
-//}
-
 
 @end

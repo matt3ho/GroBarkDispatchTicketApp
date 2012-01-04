@@ -25,4 +25,6 @@
 //@property (strong, nonatomic) IBOutlet UITableView *dispatchTicketListTable;
 @property (strong, nonatomic) IBOutlet UITableViewCell *dispatchTicketListEntryCell;
 
+- (IBAction)openMapLink:(id)sender;
+
 @end
